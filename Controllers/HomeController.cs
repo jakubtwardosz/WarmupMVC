@@ -14,10 +14,11 @@ namespace WarmupMVC.Controllers
             _logger = logger;
         }
 
-        public string Index(String name)
+        public IActionResult Index()
         {
-            name = "Jakub";
-            return $"Hello {name}!";
+            ViewBag.Name = "Kuba";
+            ViewData["Name"] = "Kuba";
+            return View();
         }
 
         public IActionResult Privacy()
