@@ -21,6 +21,14 @@ namespace WarmupMVC.Controllers
             return View();
         }
 
+        public IActionResult Loop(string? name = "Kuba", int count = 5)
+        {
+            ViewData["Name"] = name;
+            ViewData["Count"] = count;
+            return View();
+        }
+
+        
         public IActionResult Privacy()
         {
             return View();
