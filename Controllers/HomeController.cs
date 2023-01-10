@@ -14,9 +14,10 @@ namespace WarmupMVC.Controllers
             _logger = logger;
         }
 
-        public string Index()
+        public string Index(String name)
         {
-            return (DateTime.Now.Hour < 21) ? "Dzień dobry" : "Dobranoc";
+            name = "Jakub";
+            return $"Hello {name}!";
         }
 
         public IActionResult Privacy()
