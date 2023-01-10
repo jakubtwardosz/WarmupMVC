@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Linq.Expressions;
 using WarmupMVC.Models;
 
 namespace WarmupMVC.Controllers
@@ -15,7 +16,7 @@ namespace WarmupMVC.Controllers
 
         public string Index()
         {
-            return "Hello student!";
+            return (DateTime.Now.Hour < 21) ? "Dzień dobry" : "Dobranoc";
         }
 
         public IActionResult Privacy()
